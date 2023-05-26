@@ -41,9 +41,9 @@ for msg in consumer:
 
     # Create dictionary and ingest data into MongoDB
     try:
-       comics_id = {'name':name }
-       print (Centenito)
-       comics_id = db.Centenito.insert_one(comics)
+       comics_rec = {'name':name }
+       print (comics_rec)
+       comics_id = db.comics.insert_one(comics_rec)
        print("Data inserted with record ids", comics_id)
     except:
        print("Could not insert into MongoDB")
